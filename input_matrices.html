@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Matrix Values</title>
+  </head>
+  <body>
+    <h2>Enter Values for Matrices</h2>
+    <form method="POST">
+      <h3>Matrix A</h3>
+      {% for i in range(rows_a) %} {% for j in range(cols_a) %}
+      <input type="number" name="a_{{ i }}_{{ j }}" required />
+      {% endfor %}
+      <br />
+      {% endfor %}
+      <h3>Matrix B</h3>
+      {% for i in range(rows_b) %} {% for j in range(cols_b) %}
+      <input type="number" name="b_{{ i }}_{{ j }}" required />
+      {% endfor %}
+      <br />
+      {% endfor %}
+      <br />
+      <input type="submit" value="Multiply" />
+    </form>
+  </body>
+</html>
